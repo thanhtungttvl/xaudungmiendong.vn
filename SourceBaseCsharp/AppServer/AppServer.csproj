@@ -6,6 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+    <Target Name="CompileScss" BeforeTargets="Build">
+        <Exec Command="powershell -ExecutionPolicy Bypass -File build-scss.ps1" />
+    </Target>
+    
   <ItemGroup>
     <Compile Remove="logs\**" />
     <Content Remove="logs\**" />

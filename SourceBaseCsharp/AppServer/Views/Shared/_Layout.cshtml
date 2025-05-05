@@ -11,6 +11,7 @@
 
 	<!-- Color Switcher Mockup -->
 	<link href="~/assets/css/color-switcher-design.css" rel="stylesheet">
+	<link href="~/assets/css/custom.css" rel="stylesheet">
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -31,6 +32,8 @@
 	<script src="~/assets/js/bootstrap.min.js"></script>
 
 	@await RenderSectionAsync("Head", required: false)
+
+	<link rel="stylesheet" href="~/AppServer.styles.css" asp-append-version="true" />
 </head>
 
 <body>

@@ -1,0 +1,9 @@
+.main-header .main-menu .navigation > li > ul > li.dropdown > a:after {
+    position: initial;
+}
+
+.main-header .main-menu .navigation > li > ul > li > a {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
