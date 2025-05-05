@@ -11,7 +11,7 @@
 
 	<!-- Color Switcher Mockup -->
 	<link href="~/assets/css/color-switcher-design.css" rel="stylesheet">
-	<link href="~/assets/css/custom.css" rel="stylesheet">
+	<link href="~/assets/css/custom.css" rel="stylesheet" asp-append-version="true">
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -47,6 +47,13 @@
 		<!-- End Main Header -->
 
 		@RenderBody()
+
+		<!-- Main Footer -->
+		@await Component.InvokeAsync("MainFooter")
+		<!-- End Footer Style -->
+		<!-- Search Popup -->
+		@await Html.PartialAsync("Partials/_SearchPopupPartial")
+		<!-- End Search Popup -->
 	</div>
 	<!-- End PageWrapper -->
 	@await Html.PartialAsync("Partials/_ProgressWrapPartial")
@@ -73,9 +80,11 @@
 	<script src="~/assets/js/jquery-ui.js"></script>
 	<script src="~/assets/js/jquery.countdown.js"></script>
 	<script src="~/assets/js/element-in-view.js"></script>
+	<script src="~/assets/js/validate.js"></script>
 	<script src="~/assets/js/color-settings.js"></script>
-	<script src="~/assets/js/script.js"></script>
 
 	@await RenderSectionAsync("Scripts", required: false)
+
+	<script src="~/assets/js/script.js"></script>
 </body>
 </html>

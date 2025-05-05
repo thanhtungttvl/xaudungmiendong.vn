@@ -8,16 +8,8 @@
 					<!-- Header Socials -->
 					<div class="header_socials">
 						<a class="fa-brands fa-facebook-f fa-fw" href="#"></a>
-						<a class="fa-brands fa-instagram fa-fw" href="#"></a>
-						<a class="fa-brands fa-twitter fa-fw" href="#"></a>
 						<a class="fa-brands fa-youtube fa-fw" href="#"></a>
 					</div>
-					<!-- Header Top List -->
-					<ul class="header-top_list">
-						<li><a href="#">Our Shop</a></li>
-						<li><a href="#">Careers</a></li>
-						<li><a href="#">News</a></li>
-					</ul>
 				</div>
 				<div class="right-box">
 					<!-- Info List -->
@@ -40,7 +32,7 @@
 					<div class="left-box d-flex align-items-center flex-wrap">
 						<!-- Logo Box -->
 						<div class="logo-box">
-							<div class="logo"><a href="index.html"><img src="~/assets/images/logo.png" alt="" title=""></a></div>
+							<div class="logo"><a asp-controller="HomePage" asp-action="Index"><img src="~/assets/images/logo.png" alt="" title=""></a></div>
 						</div>
 						<!-- End Logo Box -->
 						<!-- Nav Outer -->
@@ -59,14 +51,14 @@
 								<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 									<ul class="navigation clearfix">
 										<li>
-											<a asp-controller="Home" asp-action="Index">Trang chủ</a>
+											<a asp-controller="HomePage" asp-action="Index">Trang chủ</a>
 										</li>
 										<li class="dropdown">
 											<a href="#">Giới thiệu</a>
 											<ul>
-												<li><a>Thông điệp của công ty</a></li>
-												<li><a>Lịch sử</a></li>
-												<li><a>Tuyên ngôn giá trị</a></li>
+												<li><a asp-controller="AboutPage" asp-action="Index">Về chúng tôi</a></li>
+												<li><a asp-controller="AboutPage" asp-action="History">Lịch sử</a></li>
+												<li><a asp-controller="AboutPage" asp-action="Proposition">Tuyên ngôn giá trị</a></li>
 												<li class="dropdown">
 													<a href="#">Nguồn lực</a>
 													<ul>
@@ -77,49 +69,51 @@
 													</ul>
 												</li>
 												<li><a>Cơ cấu tổ chức</a></li>
-												<li><a>Đội ngũ lãnh đạo</a></li>
+												<li><a asp-controller="TeamPage" asp-action="Index">Đội ngũ lãnh đạo</a></li>
 												<li><a>Trình độ chuyên môn</a></li>
 												<li><a>Năng lực thi công</a></li>
 												<li><a>Hệ thống quản lý</a></li>
-												<li><a>Thành tích</a></li>
+												<li><a asp-controller="AboutPage" asp-action="Achievements">Thành tích</a></li>
 												<li><a>Công ty thành viên</a></li>
-												<li><a>Khách hàng và đối tác</a></li>
+												<li><a asp-controller="ClientPage" asp-action="Index">Khách hàng và đối tác</a></li>
 											</ul>
 										</li>
 										<li class="dropdown">
 											<a href="#">Dịch vụ</a>
 											<ul>
-												<li><a href="portfolio.html">portfolio</a></li>
-												<li><a href="portfolio-2.html">portfolio 02</a></li>
-												<li><a href="project-detail.html">project detail</a></li>
+												<li><a>Tổng thầu</a></li>
+												<li><a>Tổng thầu Thiết kế và Thi công</a></li>
+												<li><a>Thầu chính</a></li>
+												<li class="dropdown">
+													<a href="#">Khảo sát & thiết kế</a>
+													<ul>
+														<li><a>Thiết Kế Biệt Thự</a></li>
+														<li><a>Thiết Kế Cảnh Quan</a></li>
+														<li><a>Thiết Kế Nhà Phố</a></li>
+													</ul>
+												</li>
+												<li class="dropdown">
+													<a href="#">Xây dựng</a>
+													<ul>
+														<li><a>Xây dựng dân dụng</a></li>
+														<li><a>Xây dựng công nghiệp và hạ tầng</a></li>
+														<li><a>Xây dựng MEP</a></li>
+													</ul>
+												</li>
+												<li class="dropdown">
+													<a href="#">Hạng mục</a>
+													<ul>
+														<li><a>Công trình thương mại phức hợp</a></li>
+														<li><a>Công trình nhà ở</a></li>
+														<li><a>Công trình văn hóa - y tế - Giáo dục</a></li>
+														<li><a>Công trình công nghiệp</a></li>
+														<li><a>Công trình hạ tầng - hàng không</a></li>
+													</ul>
+												</li>
 											</ul>
 										</li>
-										<li class="dropdown">
-											<a href="#">services</a>
-											<ul>
-												<li><a href="services.html">services</a></li>
-												<li><a href="service-detail.html">service detail</a></li>
-											</ul>
-										</li>
-										<li class="dropdown">
-											<a href="#">Blog</a>
-											<ul>
-												<li><a href="blog.html">Blog</a></li>
-												<li><a href="blog-classic.html">Blog Classic</a></li>
-												<li><a href="blog-detail.html">Blog Detail</a></li>
-												<li><a href="not-found.html">Not Found</a></li>
-											</ul>
-										</li>
-										<li class="dropdown">
-											<a href="#">shop</a>
-											<ul>
-												<li><a href="shop.html">shop</a></li>
-												<li><a href="shop-detail.html">shop detail</a></li>
-												<li><a href="shoping-cart.html">shoping cart</a></li>
-												<li><a href="checkout.html">checkout</a></li>
-											</ul>
-										</li>
-										<li><a href="contact.html">Contact</a></li>
+										<li><a asp-controller="BlogPage" asp-action="Index">Tin tức</a></li>
+										<li><a asp-controller="JobsPage" asp-action="Index">Tuyển dụng</a></li>
 									</ul>
 								</div>
 							</nav>
@@ -133,24 +127,16 @@
 
 						<!-- Header Options Box -->
 						<div class="header-options_box d-flex align-items-center">
-
-							<!-- Nav Btn -->
-							<div class="nav-btn navSidebar-button">
-								<i>3</i>
-								<span class="flaticon-shopping-cart"></span>
-							</div>
-
 							<!-- Search Btn -->
 							<div class="search-box-btn search-box-outer"><span class="icon flaticon-search-interface-symbol"></span></div>
-
 						</div>
 
 						<!-- Header Button Box -->
 						<div class="header_button-box">
-							<a href="contact.html" class="theme-btn btn-style-one">
+							<a asp-controller="ContactPage" asp-action="Index" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
-									<span class="text-one">Get a Quote</span>
-									<span class="text-two">Get a Quote</span>
+									<span class="text-one">Liên hệ</span>
+									<span class="text-two">Liên hệ</span>
 								</span>
 							</a>
 						</div>
@@ -164,6 +150,7 @@
 		</div>
 	</div>
 	<!-- End Header Lower -->
+
 	<!-- Mobile Menu  -->
 	<div class="mobile-menu">
 		<div class="menu-backdrop"></div>
