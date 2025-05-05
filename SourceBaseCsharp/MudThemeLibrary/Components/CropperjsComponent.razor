@@ -1,0 +1,36 @@
+﻿<MudDialog>
+    <TitleContent>Chình sửa hình ảnh</TitleContent>
+    <DialogContent>
+        <div Class="w-100 d-flex justify-center mb-3">
+            <img src="@Base64WithPrefix" @ref="_imageRef" class="mw-100" />
+        </div>
+        <div class="d-flex mb-3">
+            <img src="@_dataUrl" class="mw-100" />
+        </div>
+        <div class="docs-buttons">
+            <MudButtonGroup Color="Color.Primary" Variant="Variant.Filled" Class="mb-2 mr-2">
+                <MudButton Onclick="() => OnRotate(-45)">
+                    <MudIcon Icon="@Icons.Material.Filled.Rotate90DegreesCw" Class="flip-vertical-rotate-180" />
+                </MudButton>
+                <MudButton Onclick="() => OnRotate(45)">
+                    <MudIcon Icon="@Icons.Material.Filled.Rotate90DegreesCw" />
+                </MudButton>
+            </MudButtonGroup>
+
+            <MudButtonGroup Color="Color.Primary" Variant="Variant.Filled" Class="mb-2 mr-2">
+                <MudButton Onclick="OnScaleX">
+                    <MudIcon Icon="@MaterialSymbols.Outlined.SwapHoriz" />
+                </MudButton>
+                <MudButton Onclick="OnScaleY">
+                    <MudIcon Icon="@MaterialSymbols.Outlined.SwapVert" />
+                </MudButton>
+            </MudButtonGroup>
+        </div>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel" Variant="Variant.Filled">Cancel</MudButton>
+        <MudSpacer />
+        <MudButton Onclick="OnCroppedCanvas" StartIcon="@Icons.Material.Filled.ImageSearch" Variant="Variant.Filled" Color="Color.Success">Xem kết quả</MudButton>
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="Submit">Ok</MudButton>
+    </DialogActions>
+</MudDialog>

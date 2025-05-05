@@ -1,0 +1,21 @@
+﻿@using AppAdmin.Layout.Common
+@using MudThemeLibrary.Handlers
+@inherits LayoutComponentBase
+
+<MudThemeProvider Theme="_myCustomTheme" @bind-IsDarkMode="_themeStateContainer.IsDarkMode" />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<BreakpointBrowserViewportHandler>
+    <MudLayout Class="min-vh-100">
+        <AppBar />
+        <MudMainContent Class="d-flex min-vh-100">
+            <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="pt-6 pb-6 d-flex">
+                @Body
+            </MudContainer>
+        </MudMainContent>
+    </MudLayout>
+</BreakpointBrowserViewportHandler>
+
+<LoadingTheme Visible="_themeStateContainer.IsLoading" />

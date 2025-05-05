@@ -1,0 +1,11 @@
+.avatar-rank {
+    position: relative;
+}
+
+::deep .lottie-svg {
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: -102%;
+    left: -100%;
+}

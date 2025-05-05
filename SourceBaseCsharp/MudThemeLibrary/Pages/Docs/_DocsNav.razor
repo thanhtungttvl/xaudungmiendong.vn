@@ -1,0 +1,12 @@
+﻿<MudDrawer @bind-Open="@_open" Elevation="1" Variant="_variant">
+    <MudDrawerHeader Class="pa-3 d-flex align-center justify-center">
+        <MudIconButton OnClick="HandleOpenNav" Icon="@(_open ? @Icons.Material.Filled.ArrowBack : Icons.Material.Outlined.Menu)" Color="Color.Primary" Variant="Variant.Outlined" Class="rounded-circle" />
+    </MudDrawerHeader>
+    <MudNavMenu>
+        <MudNavLink Href="/docs" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Games" Class="white-space-nowrap">Docs</MudNavLink>
+        <MudNavLink Href="/docs/card" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Games" Class="white-space-nowrap">Card</MudNavLink>
+        <MudNavLink Href="/docs/code-mirror-editor" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Games" Class="white-space-nowrap">Code Mirror Editor</MudNavLink>
+        <MudNavLink Href="/docs/markdown" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Games" Class="white-space-nowrap">Markdown</MudNavLink>
+        <MudNavLink Href="/docs/test" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Widgets" Class="white-space-nowrap">Test</MudNavLink>
+    </MudNavMenu>
+</MudDrawer>

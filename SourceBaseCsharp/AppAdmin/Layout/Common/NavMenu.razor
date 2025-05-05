@@ -1,0 +1,22 @@
+﻿@using MudThemeLibrary.Handlers
+<MudNavMenu Color="Color.Primary" Bordered="true">
+    <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Dashboard">Dashboard</MudNavLink>
+    <MudNavGroup Title="Games" Expanded="true" Icon="@Icons.Material.Filled.Storage">
+        <MudNavLink Href="/co-caro" Match="NavLinkMatch.Prefix" Icon="fas fa-chess-board">Cờ Caro</MudNavLink>
+        <MudNavLink Href="/co-vua" Match="NavLinkMatch.Prefix" Icon="fas fa-chess">Cờ Vua</MudNavLink>
+        <MudNavLink Href="/co-tuong" Match="NavLinkMatch.Prefix" Icon="fas fa-chess-knight">Cờ Tướng</MudNavLink>
+        <MudNavLink Href="/co-cho" Match="NavLinkMatch.Prefix" Icon="fas fa-dog">Cờ Chó</MudNavLink>
+        <MudNavLink Href="/lac-bau-cua" Match="NavLinkMatch.Prefix" Icon="fas fa-fish">Lắc bầu cua</MudNavLink>
+        <MudNavLink Href="/co-tam-giac" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Security">Tam giác</MudNavLink>
+    </MudNavGroup>
+    <MudNavGroup Title="Random" Expanded="true" Icon="@Icons.Material.Filled.Interests">
+        <MudNavLink Href="/random/vong-quay-may-man" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Hive">Vòng quay may mắn</MudNavLink>
+        <MudNavLink Href="/random/do-xuc-xac" Match="NavLinkMatch.Prefix" Icon="@MaterialSymbols.Outlined.Casino">Đổ xúc xắc</MudNavLink>
+        <MudNavLink Href="/random/so-ngau-nhien" Match="NavLinkMatch.Prefix" Icon="@MaterialSymbols.Outlined.FarsightDigital">Số ngẫu nhiên</MudNavLink>
+        <MudNavLink Href="/random/sap-xep-ngau-nhien" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Hive">Sắp xếp ngẫu nhiên</MudNavLink>
+        <MudNavLink Href="/random/boc-tham" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Hive">Bốc thăm</MudNavLink>
+        <MudNavLink Href="/random/tung-dong-xu" Match="NavLinkMatch.Prefix" Icon="fas fa-donate">Tung đồng xu</MudNavLink>
+    </MudNavGroup>
+    <MudNavLink Href="/contact" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Favorite">Liên hệ</MudNavLink>
+    <MudNavLink Href="/lottie-files" Target="_blank" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ColorLens" Class="d-none">Lottie files</MudNavLink>
+</MudNavMenu>

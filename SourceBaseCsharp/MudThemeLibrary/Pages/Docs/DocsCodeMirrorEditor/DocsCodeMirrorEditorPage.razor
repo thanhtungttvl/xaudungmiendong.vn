@@ -1,0 +1,53 @@
+﻿@page "/docs/code-mirror-editor"
+
+<PageTitle>Docs | Code Mirror Editor</PageTitle>
+
+<_DocsLayout>
+    <MudGrid>
+        <MudItem xs="12">
+            <CodeMirrorEditorComponent Value="@_rawHtml" OnCodeChanged="HandleCodeChange" />
+        </MudItem>
+        <MudItem xs="12">
+            <MudMarkdown Value="@_valueMarkdown" />
+        </MudItem>
+    </MudGrid>
+</_DocsLayout>
+
+@code{
+    private string _rawHtml = @"
+            <h2>Tiêu đề</h2>
+            <p>Hello <b>World</b></p>
+            <img src='x' onerror='alert(""XSS qua hình ảnh"")' />
+            <a href='javascript:alert(""XSS link"")'>Link nguy hiểm</a>
+            <script>alert('XSS trực tiếp');</script>
+        ";
+
+    private void HandleCodeChange(string updatedCode)
+    {
+        Console.WriteLine("Code updated:");
+        Console.WriteLine(updatedCode);
+    }
+
+    private string _valueMarkdown { get; } = @"
+##### C# Example:
+``` csharp
+<CodeMirrorEditorComponent Value=""@_rawHtml"" OnCodeChanged=""HandleCodeChange"" />
+
+@code {
+    private string _rawHtml = @""
+            <h2>Tiêu đề</h2>
+            <p>Hello <b>World</b></p>
+            <img src='x' onerror='alert(""XSS qua hình ảnh"")' />
+            <a href='javascript:alert(""XSS link"")'>Link nguy hiểm</a>
+            <script>alert('XSS trực tiếp');</script>
+        "";
+
+    private void HandleCodeChange(string updatedCode)
+    {
+        Console.WriteLine(""Code updated:"");
+        Console.WriteLine(updatedCode);
+    }
+}
+```
+";
+}

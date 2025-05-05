@@ -1,0 +1,20 @@
+﻿@page "/auth/logout"
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        var authStateProvider = (LocalAuthenticationProvider)AuthStateProvider;
+        await authStateProvider.NotifyUserLogout();
+
+        string? returnUrl = Navigation.QueryStringUrl("returnUrl");
+
+        if (string.IsNullOrEmpty(returnUrl))
+        {
+            Navigation.NavigateTo("/auth/login", true);
+        }
+        else
+        {
+            Navigation.NavigateTo($"/auth/login?returnUrl={returnUrl}", true);
+        }
+    }
+}

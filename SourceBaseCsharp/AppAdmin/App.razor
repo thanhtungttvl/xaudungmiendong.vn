@@ -1,0 +1,24 @@
+﻿<CascadingAuthenticationState>
+    <Router AppAssembly="@typeof(App).Assembly" AdditionalAssemblies="new[] { typeof(MudThemeLibrary.Pages.Docs.DocsPage).Assembly }">
+        <Found Context="routeData">
+            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+                <NotAuthorized>
+                    @if (context.User.Identity?.IsAuthenticated is not true)
+                    {
+                        <RedirectToLoginHandler />
+                    }
+                </NotAuthorized>
+                <Authorizing>
+                    <LoadingTheme Visible="true"/>
+                </Authorizing>
+            </AuthorizeRouteView>
+            <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+        </Found>
+        <NotFound>
+            <PageTitle>Not found</PageTitle>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <ErrorHandlerTheme JsonUrl="lottiefiles/9148393.json" Class="mx-auto w-100 w-md-50"/>
+            </LayoutView>
+        </NotFound>
+    </Router>
+</CascadingAuthenticationState>
