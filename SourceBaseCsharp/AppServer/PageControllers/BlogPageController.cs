@@ -2,7 +2,7 @@
 
 namespace AppServer.PageControllers
 {
-    [Route("blog")]
+    [Route("tin-tuc")]
     public class BlogPageController : Controller
     {
         [HttpGet]
