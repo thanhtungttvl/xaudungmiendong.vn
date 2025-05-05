@@ -20,8 +20,8 @@ namespace AppServer.PageControllers
         }
 
         [HttpGet]
-        [Route("tuyen-ngon-gia-tri")]
-        public IActionResult Proposition()
+        [Route("tuyen-ngon")]
+        public IActionResult Declaration()
         {
             return View();
         }

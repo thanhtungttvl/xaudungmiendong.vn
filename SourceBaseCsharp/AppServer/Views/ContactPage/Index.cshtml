@@ -1,10 +1,11 @@
-﻿@using AppShare.Models.Views
+﻿@{
+	ViewData["Title"] = "Liên hệ";
+}
 
-<!-- End Page Title -->
 @await Html.PartialAsync("Partials/_PageTitlePartial", new PageTitleViewModel
 	{
 		Title = "Liên hệ",
-		Background = "assets/images/background/24.jpg",
+		Background = "/assets/images/background/24.jpg",
 		Breadcrumbs = new Dictionary<string, string> { 
 			{ Url.Action("Index", "HomePage")!, "Trang chủ" }, 
 			{ "#", "Liên hệ" } 

@@ -1,13 +1,14 @@
 ﻿@{
-	ViewData["Title"] = "Khách hàng & Đối tác";
+	ViewData["Title"] = "Tuyên ngôn";
 }
 
 @await Html.PartialAsync("Partials/_PageTitlePartial", new PageTitleViewModel
 {
-	Title = "Khách hàng & Đối tác",
+	Title = "Tuyên ngôn",
 	Background = "/assets/images/background/24.jpg",
 	Breadcrumbs = new Dictionary<string, string> {
 				{ Url.Action("Index", "HomePage")!, "Trang chủ" },
-				{ "#", "Khách hàng & Đối tác" }
+				{ Url.Action("Index", "AboutPage")!, "Giới thiệu" },
+				{ "#", "Tuyên ngôn" }
 			}
 })
